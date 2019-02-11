@@ -25,7 +25,7 @@
     Function
   */
  
- let person = 
+ let person = {
      name: 'Prasamsha',
      age= 22
  }; //object
