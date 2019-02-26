@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .styled-bloc{
+            color:white;
+            background-color: black;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-bloc" id="stylebloc">
+        <p>My bloc</p>
+
+    </div>
+    <script>
+        const dive = document.getElementById('stylebloc');
+        dive.style.backgroundColor = 'red';
+        dive.innerHTML ="I get it ! I'm using javascript like a boss";
+        dive.style.height = '500px';
+       
+
+        const userwidth = prompt('what is the value of your bloc?');
+        dive.style.width = `${userwidth}px` ;
+        let value = prompt('give me the value>500')
+    
+        
+        while(parseInt(value) < 500){
+             value = prompt('give me the value>500');
+
+        }
+        //alert(`good.The value was ${value}`);
+
+        
+         
+    </script>
+</body>
+</html>
