@@ -8,11 +8,10 @@
 </head>
 <body id="mybody">
     <form>
-        <input id="addtask">
-        <button type="button"  onclick="taskName()">Add Task</button>
+        <input id="addtask"  onfocus="value=''">
+        <button type="button" onclick="taskName()">Add Task</button>
 
-
-    </form>
+   </form>
     <ul id="taskname">
        
         
@@ -20,59 +19,25 @@
     
       <p>Counter:<span id="numberoftask"></span></p>
 
-        
+          <script>
 
-
-    
-   
-    <script>
-
-       
-        
         function taskName(){
 
-          
-          
-       
-              
-        
-       
-           
-            let item = document.getElementById("addtask").value
+           let item = document.getElementById("addtask").value
+
             let text = document.createTextNode(item)
+
             let newItem = document.createElement("li")
-           
             newItem.appendChild(text)
             document.getElementById("taskname").appendChild(newItem)
           
-            A = document.getElementById("taskname")
-            A.insertBefore(newItem,A.childNodes[0]);
-        let Counter =  document.getElementById("taskname").childElementCount
+            let a = document.getElementById("taskname")
+            a.insertBefore(newItem,a.childNodes[0]);
+            let Counter =  document.getElementById("taskname").childElementCount
             console.log(Counter);
             document.getElementById("numberoftask").innerText = Counter
-            
+             }
 
-        
-           
-
-             
-          
-
-            
-
-       
-           
-           
-        }
-
-       
-
-      
-   
-      
-
-       
-        
-    </script>
+        </script>
 </body>
 </html>
