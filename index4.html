@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Task</title>
 </head>
-<body>
+<body id="mybody">
     <form>
         <input id="addtask">
         <button type="button"  onclick="taskName()">Add Task</button>
@@ -17,15 +17,59 @@
        
         
     </ul>
+    
+      <p>Counter:<span id="numberoftask"></span></p>
+
+        
+
+
+    
    
     <script>
+
+       
+        
         function taskName(){
+
+          
+          
+       
+              
+        
+       
+           
             let item = document.getElementById("addtask").value
             let text = document.createTextNode(item)
             let newItem = document.createElement("li")
+           
             newItem.appendChild(text)
             document.getElementById("taskname").appendChild(newItem)
+          
+            A = document.getElementById("taskname")
+            A.insertBefore(newItem,A.childNodes[0]);
+        let Counter =  document.getElementById("taskname").childElementCount
+            console.log(Counter);
+            document.getElementById("numberoftask").innerText = Counter
+            
+
+        
+           
+
+             
+          
+
+            
+
+       
+           
+           
         }
+
+       
+
+      
+   
+      
 
        
         
